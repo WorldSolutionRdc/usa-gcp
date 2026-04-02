@@ -1,25 +1,24 @@
-# Proxy Nginx pour VPS (167.99.88.149)
+# Proxy Nginx pour VPS New York (199.19.72.98)
 
 Proxy Nginx déployé sur Google Cloud Run pour rediriger le trafic TCP vers le VPS principal.
 
 ## Configuration
 | Élément | Valeur |
 |---------|--------|
-| **VPS cible** | `167.99.88.149:443` |
+| **VPS cible** | `199.19.72.98:443` |
 | **Port d'écoute proxy** | `8080` |
-| **Région VPS** | `europe-west3` (Francfort, Allemagne) |
-| **Région Cloud Run** | `africa-south1` (Johannesburg, Afrique du Sud) |
+| **Région VPS** | `us-east4` (New York, USA) |
+| **Région Cloud Run** | `northamerica-northeast1` (Montréal, Canada) |
 | **Type de proxy** | TCP Stream (Layer 4) |
 
 ## Déploiement
 ```bash
-gcloud run deploy ultra-speed-proxy \
+gcloud run deploy newyork-proxy \
   --source . \
   --platform managed \
-  --region africa-south1 \
+  --region northamerica-northeast1 \
   --allow-unauthenticated \
   --port 8080 \
   --memory 512Mi \
   --cpu 1 \
-  --timeout 3600 \
-  --service-account worldvip@project-a042baed-7fb0-4ada-a53.iam.gserviceaccount.com
+  --timeout 3600
