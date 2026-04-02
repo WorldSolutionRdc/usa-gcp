@@ -8,7 +8,7 @@ Proxy Nginx déployé sur Google Cloud Run pour rediriger le trafic TCP vers le 
 | **VPS cible** | `199.19.72.98:443` |
 | **Port d'écoute proxy** | `8080` |
 | **Région VPS** | `us-east4` (New York, USA) |
-| **Région Cloud Run** | `northamerica-northeast1` (Montréal, Canada) |
+| **Région Cloud Run** | `europe-west2` (Londres, Royaume-Uni) |
 | **Type de proxy** | TCP Stream (Layer 4) |
 
 ## Déploiement
@@ -16,7 +16,7 @@ Proxy Nginx déployé sur Google Cloud Run pour rediriger le trafic TCP vers le 
 gcloud run deploy newyork-proxy \
   --source . \
   --platform managed \
-  --region northamerica-northeast1 \
+  --region europe-west2 \
   --allow-unauthenticated \
   --port 8080 \
   --memory 512Mi \
